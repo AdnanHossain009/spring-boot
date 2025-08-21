@@ -2,9 +2,11 @@ package org.springframework.boot.build;
 
 public class Calculator {
 
-    public double add(double a, double b) {
-        return a + b;
-    }
+public double add(double a, double b) {
+    double result = a + b;
+    return Math.round(result * 100.0) / 100.0; // keep rounding and addition
+}
+
 
     public double subtract(double a, double b) {
         return a - b;
